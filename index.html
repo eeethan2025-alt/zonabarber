@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Barber</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Íconos minimalistas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Zona Barber</div>
+    <nav>
+      <a href="#offers">Ofertas</a>
+      <a href="#products">Productos</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tuusuario"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/59800000000"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <button id="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+  </header>
+
+  <!-- Ofertas -->
+  <section id="offers" class="offers">
+    <h2>🔥 Ofertas del Mes 🔥</h2>
+    <div class="offer-item">
+      <img src="/imgg/rpor.jpg" alt="Oferta">
+      <div class="offer-info">
+        <h3>Máquina Wahl Pro</h3>
+        <p>Descuento especial este mes</p>
+        <span>$120</span>
+        <button onclick="addToCart('Máquina Wahl Pro',120)">Agregar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="products" class="categories">
+    <h2>Productos</h2>
+    <div class="category">
+      <h3>Máquinas</h3>
+      <div class="product">
+        <img src="imgg/WhatsApp Image 2026-04-08 at 5.42.19 PM.jpeg" alt="Máquina">
+        <h4>Máquina Andis</h4>
+        <p>Potente y precisa</p>
+        <span>$150</span>
+        <button onclick="addToCart('Máquina Andis',150)">Agregar</button>
+      </div>
+      <div class="product">
+        <img src="imgg/WhatsApp Image 2026-04-08 at 5.42.19 PM.jpeg" alt="Máquina">
+        <h4>Máquina "x"</h4>
+        <p>Potente y precisa</p>
+        <span>$150</span>
+        <button onclick="addToCart('Máquina Andis',150)">Agregar</button>
+      </div>
+    </div>
+    <div class="category">
+      <h3>Tijeras</h3>
+      <div class="product">
+        <img src="imgg/134105062253819284.jpg" alt="Tijera">
+        <h4>Tijera Premium</h4>
+        <p>Acero inoxidable</p>
+        <span>$80</span>
+        <button onclick="addToCart('Tijera Premium',80)">Agregar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <blockquote>"Excelente calidad y atención, las máquinas son de primera." – Juan P.</blockquote>
+    <blockquote>"Zona Barber me resolvió todo para mi barbería, súper recomendado." – Martín R.</blockquote>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="contacto" class="newsletter">
+    <h2>Suscríbete para recibir ofertas</h2>
+    <form>
+      <input type="email" placeholder="Tu correo electrónico">
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Zona Barber. Todos los derechos reservados.</p>
+    <p>Tel: +598 0000 0000 | Email: contacto@zonabarber.com</p>
+  </footer>
+
+  <!-- Carrito flotante -->
+  <div id="cart-overlay">
+    <aside id="cart">
+      <div class="cart-header">
+        <h2>🛒 Carrito</h2>
+        <button id="close-cart" class="close-btn">✖</button>
+      </div>
+      <ul id="cart-items"></ul>
+      <div id="cart-total"></div>
+      <div class="cart-footer">
+        <button id="send-wpp">Enviar Pedido a WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/59800000000" class="wpp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
