@@ -226,10 +226,24 @@ footer {
     width: 95%;
   }
 }
-
+/* Ajuste especial para móviles */
+@media (max-width: 768px) {
+  .offer-item img {
+    max-width: 100%;   /* que nunca se corte en celular */
+  }
+}
 .product img {
   width: 200px;       /* ancho fijo */
   height: 200px;      /* alto fijo */
   object-fit: cover;  /* recorta la imagen para que se adapte */
   border-radius: 8px; /* esquinas redondeadas opcional */
+}
+
+.offer-item img {
+  width: 100%;        /* ocupa todo el ancho disponible */
+  height: auto;       /* mantiene proporción */
+  max-width: 600px;   /* límite en pantallas grandes */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
