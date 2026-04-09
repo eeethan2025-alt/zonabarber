@@ -81,32 +81,31 @@ button:hover {
   background: #444;
 }
 
-/* Carrito flotante */
+/* Carrito modal centrado */
 #cart-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none; /* oculto por defecto */
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+  width: 100%;      
+  height: 100%;     
+  background: rgba(0,0,0,0.5);
+  display: none;    
+  z-index: 2000;
 }
 
 #cart-overlay.active {
-  display: flex;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;    
 }
 
 #cart {
   background: #fff;
-  width: 90%;
-  max-width: 400px;
+  width: 90%;          
+  max-width: 400px;    
   border-radius: 10px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .cart-header {
@@ -167,7 +166,7 @@ button:hover {
 }
 
 #send-wpp:hover {
-  background: #1ebe5d;
+  background: #487b5c;
 }
 
 /* Testimonios */
@@ -197,18 +196,35 @@ footer {
   padding: 15px;
 }
 
-/* Botón flotante WhatsApp */
+/* Botones flotantes (unificados) */
+.cart-float,
 .wpp-float {
   position: fixed;
-  bottom: 20px;
   right: 20px;
-  background: #25D366;
-  color: #fff;
   border-radius: 50%;
-  padding: 15px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5em;
+  cursor: pointer;
   text-align: center;
   z-index: 1000;
+}
+
+/* Carrito flotante */
+.cart-float {
+  bottom: 80px;       /* arriba del botón de WhatsApp */
+  background: #000;
+  color: #fff;
+}
+
+/* WhatsApp flotante */
+.wpp-float {
+  bottom: 15px;
+  background: #25D366;
+  color: #fff;
 }
 
 /* Responsive */
@@ -226,23 +242,18 @@ footer {
     width: 95%;
   }
 }
-/* Ajuste especial para móviles */
-@media (max-width: 768px) {
-  .offer-item img {
-    max-width: 100%;   /* que nunca se corte en celular */
-  }
-}
+
 .product img {
-  width: 200px;       /* ancho fijo */
-  height: 200px;      /* alto fijo */
-  object-fit: cover;  /* recorta la imagen para que se adapte */
-  border-radius: 8px; /* esquinas redondeadas opcional */
+  width: 200px;       
+  height: 200px;      
+  object-fit: cover;  
+  border-radius: 8px; 
 }
 
 .offer-item img {
-  width: 100%;        /* ocupa todo el ancho disponible */
-  height: auto;       /* mantiene proporción */
-  max-width: 600px;   /* límite en pantallas grandes */
+  width: 100%;        
+  height: auto;       
+  max-width: 600px;   
   border-radius: 10px;
   display: block;
   margin: 0 auto;

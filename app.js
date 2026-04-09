@@ -95,3 +95,11 @@ document.getElementById('send-wpp').addEventListener('click', () => {
   // Reemplaza el número con el de tu barbería
   window.open(`https://wa.me/59895534446?text=${message}`, '_blank');
 });
+
+// Botón flotante del carrito
+const cartFloatBtn = document.getElementById("cart-float-btn");
+
+// Al hacer clic en el botón flotante, abre/cierra el mismo carrito overlay
+cartFloatBtn.addEventListener("click", () => {
+  document.getElementById("cart-overlay").classList.toggle("active");
+});
