@@ -93,5 +93,5 @@ document.getElementById('send-wpp').addEventListener('click', () => {
   message += `%0ATotal: $${total}`;
 
   // Reemplaza el número con el de tu barbería
-  window.open(`https://wa.me/59800000000?text=${message}`, '_blank');
+  window.open(`https://wa.me/59895534446?text=${message}`, '_blank');
 });
